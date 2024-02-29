@@ -1,0 +1,201 @@
+@import "modules/variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+
+  // Top Styles
+  .top-container {
+    margin-top: 9rem;
+    margin-bottom: 7rem;
+    width: 100%;
+    height: 30rem;
+    background: #f6ebda;
+    position: relative;
+
+    .top-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .top-bg {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../../Assets/Images/bg-aboutus.png);
+        background-size: 100%;
+        opacity: 0.2;
+      }
+
+      .top-contents {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.02rem;
+        position: relative;
+        z-index: 789;
+
+        .img-card {
+          padding: 1.2rem;
+          height: 100%;
+          width: 22rem;
+          margin-right: 10%;
+          margin-left: 5%;
+          position: relative;
+          top: -20%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+          }
+        }
+
+        .top-strings {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          a {
+            width: fit-content;
+            padding: 0.5rem;
+            border-radius: 2rem;
+            background: black;
+            text-decoration: none;
+            color: burlywood;
+          }
+        }
+      }
+    }
+  }
+
+  // Bottom Styles
+  .bottom-container {
+    margin: 12%;
+
+    .title-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .title {
+        display: flex;
+        flex-direction: row;
+
+        .outer {
+          display: flex;
+          flex-direction: row;
+
+          .inner {
+            margin-left: 4px;
+            border-bottom: 0.4rem solid burlywood;
+          }
+        }
+      }
+    }
+
+    .cards-wrapper {
+      width: 100%;
+      border-radius: 1rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 3rem;
+
+      .card {
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+
+        .bottom-img {
+          position: relative;
+          width: fit-content;
+
+          img {
+            border-radius: 1rem;
+            object-fit: cover;
+            width: 100%;
+            height: 75%;
+          }
+
+          .product-rating {
+            padding: 0.5rem;
+            margin: 0.3rem;
+            position: absolute;
+            border-radius: 2rem;
+            top: 0.2rem;
+            left: 0.2rem;
+            background: rgba($color: white, $alpha: 0.5);
+
+            .product-contains {
+              display: flex;
+              border-radius: 50px;
+              background-color: #f6ebda;
+              padding: 0.2rem 0.6rem;
+              align-items: center;
+              gap: 3px;
+
+              span {
+                font-weight: 500;
+                font-size: 1rem;
+              }
+
+              img {
+                width: 1rem;
+                height: 1rem;
+              }
+            }
+          }
+        }
+
+        .menu-name {
+          display: flex;
+          flex-direction: row;
+          margin: 0.5rem 0.25rem;
+          justify-content: space-between;
+
+          h5 {
+            font-size: 1rem;
+            margin: 0;
+            text-align: center;
+          }
+        }
+
+        .menu-desc {
+          display: flex;
+          flex-direction: row;
+          margin: 0.5rem 0.25rem;
+          justify-content: space-between;
+
+          .menu-string {
+            max-width: 50%;
+          }
+
+          .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkorange;
+            border-radius: 1rem;
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,58 +1,99 @@
+:root {
+  --background-rgb: 2 6 23;
+  --background-light-rgb: 30 41 59;
+
+  --border-rgb: 255 255 255;
+  --border: 1px solid rgb(var(--border-rgb) / 20%);
+
+  --main-rgb: 41 121 255;
+  --main-light-rgb: 56 182 255;
+  --secondary-rgb: 42 252 152;
+
+  --card-size: 712px;
+  --font-size: 0.8rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: radial-gradient(at center center, #4CAF50, #0f3057);
-  background-repeat: no-repeat;
-  transition: background 0.5s ease;
+  background: rgb(var(--background-rgb));
   height: 100vh;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  transition: transform 1s ease-out;
+  transform: scale(1);
 }
 
-.container {
+body.whenLoaded {
+  transform: scale(1.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.project {
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  width: 200px;
+  justify-content: center;
   position: relative;
-  overflow: hidden;
-}
+  z-index: 4;
 
-.project:hover {
-  color: #000;
-}
+  h1 {
+    color: #ff7ddb;
+    text-shadow:
+      rgba(255, 255, 255, 0) 0px 0px 10px,
+      rgba(255, 255, 255, 0.5) 0px 0px 20px,
+      rgba(224, 0, 230, 0.35) 0px 0px 30px,
+      rgba(0, 230, 178, 0) 0px 0px 40px,
+      rgba(0, 230, 189, 0.24) 0px 0px 50px,
+      rgba(178, 0, 230, 0.16) 0px 0px 60px,
+      rgba(167, 0, 230, 0.34) 0px 0px 70px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+  }
 
-.project:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ff8a00, #e52e71, #8a2be2, #4b0082);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
+  a {
+    text-decoration: none;
+    color: #ff7ddb;
+    text-shadow:
+      rgba(255, 255, 255, 0) 0px 0px 10px,
+      rgba(255, 255, 255, 0.5) 0px 0px 20px,
+      rgba(224, 0, 230, 0.35) 0px 0px 30px,
+      rgba(0, 230, 178, 0) 0px 0px 40px,
+      rgba(0, 230, 189, 0.24) 0px 0px 50px,
+      rgba(178, 0, 230, 0.16) 0px 0px 60px,
+      rgba(167, 0, 230, 0.34) 0px 0px 70px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
 
+    font-size: 18Q;
+  }
 
-.project:hover::before {
-  opacity: 0.6;
-}
+  .blinker {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
 
-.project a {
-  text-decoration: none;
-  color: #333;
+  .blinker:hover,
+  .blinker:focus {
+    animation: none;
+    transform: scale(1.2);
+  }
 }

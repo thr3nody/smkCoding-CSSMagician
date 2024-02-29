@@ -1,41 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>I'm Not Good Enough</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Choose something?</title>
-  <link href="./style.css" rel="stylesheet">
-</head>
-
-<body onmousemove="changeBackgroundGradient(event)">
-  <h1>Choose a CSS Magician Project</h1>
-  <div class="container">
-    <div class="project">
-      <a href="./one-Bootstrap/">Bootstrap First Week</a>
+  <body>
+    <div class="content">
+      <h1 class="blinker">Erine's CSSMagician</h1>
+      <a href="./one-Bootstrap/" class="blinker">Bootstrap</a>
+      <a href="./two-SassScss/" class="blinker">SCSS [CURRENT]</a>
+      <a href="." class="blinker">TBA</a>
+      <a href="." class="blinker">TBA</a>
     </div>
-    <div class="project">
-      <a href=".">TBA</a>
-    </div>
-    <div class="project">
-      <a href=".">TBA</a>
-    </div>
-  </div>
 
-  <script>
-    function changeBackgroundGradient(event) {
-      const body = document.querySelector("body");
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-
-      const xPercentage = (mouseX / width) * 100;
-      const yPercentage = (mouseY / height) * 100;
-
-      body.style.background = `radial-gradient(at ${xPercentage}% ${yPercentage}%, #4CAF50, #0f3057)`;
-    }
-  </script>
-</body>
-
+    <script src="./imNotGoodEnough.js" />
+  </body>
 </html>
