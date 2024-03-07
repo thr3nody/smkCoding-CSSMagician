@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ini Tailwind Ahaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Poppins";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TODO: Top here -->
+    <div class="top-container mr-20 my-10">
+      <div class="w-full h-[450px] relative py-16">
+        <div
+          class="block absolute h-full bg-[url('../Assets/Images/bg-testimonial.png')] bg-cover z-10 opacity-10 rounded-r-3xl"
+        ></div>
+        <div
+          class="block absolute w-2/3 h-full left-0 top-0 bg-cover bg-[#f6ebda] z-0 rounded-r-3xl"
+        ></div>
+
+        <div class="flex flex-row w-full h-full relative z-10">
+          <div class="flex flex-col justify-center gap-5 w-auto ml-24">
+            <h1 class="font-bold text-3xl">What they say about us</h1>
+            <p class="w-3/4">
+              We always provide the best service and always maintain the quality
+              of coffee
+            </p>
+          </div>
+          <div
+            class="flex flex-row w-full h-full relative gap-14 justify-around"
+          >
+            <div class="relative h-full">
+              <div class="relative h-full w-fit">
+                <img
+                  class="object-cover h-full"
+                  src="../Assets/Images/testimonial-1.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute bottom-6 left-8 w-64 h-max bg-[rgba(246,215,170,0.5)] z-20 rounded-lg p-2"
+              >
+                <div
+                  class="flex flex-col bg-[#ffcb7c] w-full h-full rounded-lg p-2"
+                >
+                  <p class="font-medium text-lg">Naura</p>
+                  <p class="font-normal text-lg">
+                    I really love the cappucino, the coffee was very smooth
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative h-full">
+              <div class="relative h-full w-fit">
+                <img
+                  class="object-cover h-full"
+                  src="../Assets/Images/testimonial-2.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute bottom-6 left-8 w-64 h-max bg-[rgba(246,215,170,0.5)] z-20 rounded-lg p-2"
+              >
+                <div
+                  class="flex flex-col bg-[#ffcb7c] w-full h-full rounded-lg p-2"
+                >
+                  <p class="font-medium text-lg">John</p>
+                  <p class="font-normal text-lg">
+                    This cofee shop is very convenient
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative h-full">
+              <div class="relative h-full w-fit">
+                <img
+                  class="object-cover h-full"
+                  src="../Assets/Images/testimonial-3.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute bottom-6 left-8 w-full h-max bg-[rgba(246,215,170,0.5)] z-20 rounded-lg p-2"
+              >
+                <div
+                  class="flex flex-col bg-[#ffcb7c] w-full h-full rounded-lg p-2"
+                >
+                  <p class="font-medium text-lg">Azura</p>
+                  <p class="font-normal text-lg">
+                    the coffee menu here is very much
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: Bottom here -->
+    <div class="bottom-container mx-20 my-10 p-10 flex flex-col justify-center">
+      <div
+        class="mx-20 h-full bottom-wrap rounded-2xl bg-scroll bg-cover"
+        style="background-image: url(../Assets/Images/bg-newsletter.png)"
+      >
+        <div
+          class="h-80 gap-5 bottom-contents text-center flex flex-col justify-center"
+        >
+          <h1 class="text-white font-medium text-4xl">
+            Subscribe to get 50% discount price
+          </h1>
+          <div class="flex flex-col w-full justify-center items-center">
+            1
+            <div
+              class="w-fit bottom-input bg-white rounded-full p-2 flex flex-row justify-center"
+            >
+              <input
+                type="text"
+                name=""
+                value=""
+                class="w-100 h-full bg-white rounded-full focus:outline-none flex flex-row text-lg py-2 px-3"
+                placeholder="Email address"
+              />
+              <a
+                href="."
+                class="flex flex-row justify-center px-3 items-center font-normal bg-[#2f2105] text-white w-full rounded-full"
+                >Order now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

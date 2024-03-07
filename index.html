@@ -11,11 +11,19 @@
     <div class="content">
       <h1 class="blinker">Erine's CSSMagician</h1>
       <a href="./one-Bootstrap/" class="blinker">Bootstrap</a>
-      <a href="./two-SassScss/" class="blinker">SCSS [CURRENT]</a>
-      <a href="." class="blinker">TBA</a>
-      <a href="." class="blinker">TBA</a>
+      <a href="./two-SassScss/" class="blinker">SCSS</a>
+      <a href="./three-Tailwind/" class="blinker">Tailwind [CURRENT]</a>
     </div>
 
-    <script src="./imNotGoodEnough.js" />
+    <script>
+      document.querySelectorAll(".blinker").forEach((element) => {
+        const randomDuration = Math.random() * 2 + 1;
+        element.style.animationDuration = `${randomDuration}s`;
+      });
+
+      window.onload = function () {
+        document.body.classList.add("whenLoaded");
+      };
+    </script>
   </body>
 </html>
